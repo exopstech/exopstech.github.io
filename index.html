@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to exops</title>
+
+    <meta property="og:title" content="exops site">
+    <meta property="og:description" content="my silly little site">
+    <meta property="og:image" content="https://exopss.lol/rez.jpg">
+    <meta property="og:url" content="https://exopss.lol">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ff0000;
+            color: #000000;
+        }
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+            flex-direction: column;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 15px;
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #ff0000;
+            transform: translateY(-2px);
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to my site
+    </header>
+    <div class="container">
+        <h2>These are all my sites I have up</h2>
+        <div class="button-container">
+            <a href="https://fmovs.exopss.lol/" class="button">Movie site</a>
+            <a href="https://upload.exopss.lol/" class="button">image host (inv only) </a>
+            <a href="https://bio.exopss.lol/" class="button">Bio site</a>
+            <a href="https://status.exopss.lol/" class="button">Stat page</a>
+        </div>
+        <audio id="backgroundMusic" autoplay loop muted>
+            <source src="music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <footer>
+        &copy; 2024 exops. All rights reserved trust.
+    </footer>
+
+    <script>
+        function animateTitle() {
+            const titleElement = document.title;
+            const titleText = 'exops';
+            let currentText = '';
+            let index = 0;
+
+            function addLetter() {
+                if (index < titleText.length) {
+                    currentText += titleText[index];
+                    document.title = currentText;
+                    index++;
+                    setTimeout(addLetter, 500);
+                }
+            }
+
+            addLetter();
+        }
+
+        // Unmute audio on user interaction
+        window.addEventListener('click', function() {
+            const audio = document.getElementById('backgroundMusic');
+            audio.muted = false; // Unmute audio
+        });
+
+        window.onload = animateTitle;
+    </script>
+</body>
+</html>
