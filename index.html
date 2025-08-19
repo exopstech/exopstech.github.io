@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to exops</title>
+    <title>Welcome</title>
 
     <meta property="og:title" content="exops site">
     <meta property="og:description" content="my silly little site">
@@ -15,75 +15,79 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #ff0000;
-            color: #000000;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff4d4d, #ff9999);
+            color: #222;
         }
         header {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 20px 0;
+            background-color: #111;
+            color: #fff;
+            padding: 25px 0;
             text-align: center;
-            font-size: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            min-height: 75vh;
             text-align: center;
             flex-direction: column;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
         }
         .button-container {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .button {
             display: inline-block;
-            padding: 15px 40px;
-            margin: 15px;
-            background-color: #000000;
+            padding: 14px 35px;
+            margin: 12px;
+            background-color: #222;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             font-size: 18px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, transform 0.3s;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
         }
         .button:hover {
-            background-color: #ff0000;
-            transform: translateY(-2px);
+            background-color: #ff4d4d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
         }
         footer {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #111;
+            color: #fff;
             text-align: center;
             padding: 15px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
     <header>
-        Welcome to my site
+        Meow
     </header>
     <div class="container">
-        <h2>These are all my sites I have up</h2>
+        <h2>Heres MY sites!!</h2>
         <div class="button-container">
-            <a href="http://fmovs.exopss.xyz/" class="button">Movie site</a>
-            <a href="http://exopss.pics/" class="button">image host (inv only)</a>
-            <a href="http://bio.exopss.xyz/" class="button">Bio site (DOWN)</a>
-            <a href="http://status.exopss.xyz/" class="button">Stat page (DOWN)</a>
+            <a href="http://fmovs.exopss.xyz/" class="button">🎬 Movie site</a>
+            <a href="http://exopss.pics/" class="button">🖼️ Image host (inv only)</a>
+            <a href="http://bio.exopss.xyz/" class="button">📖 Bio site (DOWN)</a>
+            <a href="http://status.exopss.xyz/" class="button">📊 Status page (DOWN)</a>
         </div>
-        <audio id="backgroundMusic" autoplay loop muted>
-            <source src="http://exopss.lol/music.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
     </div>
     <footer>
-        &copy; 2024 exops. All rights reserved trust.
+        &copy; Made with ❤️
     </footer>
 
     <script>
@@ -97,21 +101,13 @@
                     currentText += titleText[index];
                     document.title = currentText;
                     index++;
-                    setTimeout(addLetter, 500);
+                    setTimeout(addLetter, 400);
                 }
             }
             addLetter();
         }
 
-        window.onload = function() {
-            animateTitle();
-            const audio = document.getElementById('backgroundMusic');
-            audio.volume = 0.2;
-            setTimeout(() => {
-                audio.muted = false;
-                audio.play().catch(() => {});
-            }, 500);
-        };
+        window.onload = animateTitle;
     </script>
 </body>
 </html>
