@@ -7,7 +7,7 @@
 
     <meta property="og:title" content="exops site">
     <meta property="og:description" content="my silly little site">
-    <meta property="og:image" content="https://exopss.lol/rez.jpg">
+    <meta property="og:image" content="https://github.com/exopstech/exopstech.github.io/blob/main/rez.jpg?raw=true">
     <meta property="og:url" content="https://exopss.lol">
     <meta property="og:type" content="website">
 
@@ -73,9 +73,9 @@
         <h2>These are all my sites I have up</h2>
         <div class="button-container">
             <a href="https://fmovs.exopss.xyz/" class="button">Movie site</a>
-            <a href="https://exopss.pics/" class="button">image host (inv only) </a>
-            <a href="https://bio.exopss.xyz/" class="button">Bio site (DOWN) </a>
-            <a href="https://status.exopss.xyz/" class="button">Stat page (DOWN) </a>
+            <a href="https://exopss.pics/" class="button">image host (inv only)</a>
+            <a href="https://bio.exopss.xyz/" class="button">Bio site (DOWN)</a>
+            <a href="https://status.exopss.xyz/" class="button">Stat page (DOWN)</a>
         </div>
         <audio id="backgroundMusic" autoplay loop muted>
             <source src="music.mp3" type="audio/mp3">
@@ -88,7 +88,6 @@
 
     <script>
         function animateTitle() {
-            const titleElement = document.title;
             const titleText = 'exops';
             let currentText = '';
             let index = 0;
@@ -101,14 +100,13 @@
                     setTimeout(addLetter, 500);
                 }
             }
-
             addLetter();
         }
 
-        // Unmute audio on user interaction
         window.addEventListener('click', function() {
             const audio = document.getElementById('backgroundMusic');
-            audio.muted = false; // Unmute audio
+            audio.muted = false;
+            audio.volume = 0.2;
         });
 
         window.onload = animateTitle;
